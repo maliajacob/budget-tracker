@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from 'react'
-import { GlobalContext } from '../other/GlobalState.js';
+import { GlobalContext } from '../context/GlobalState.js';
 
 export const IncomeExpense = () => {
   const { transactions } = useContext(GlobalContext);
@@ -16,13 +16,13 @@ export const IncomeExpense = () => {
     -1
   ).toFixed(2);
   return (
-    <div>
-      <div>
-        <h4>Income</h4>
+    <div className='font-serif flex justify-center'>
+      <div className='my-3 p-3 bg-slate-100'>
+        <h4 className='text-xl'>Income</h4>
         <p>{income}</p>
       </div>
-      <div>
-        <h4>Expense</h4>
+      <div className='my-3 p-3 bg-slate-100'>
+        <h4 className='text-xl'>Expense</h4>
         <p>{expense}</p>
       </div>
     </div>

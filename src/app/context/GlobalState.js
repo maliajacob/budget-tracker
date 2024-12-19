@@ -8,8 +8,8 @@ const initialState = {
 }
 export const GlobalContext = createContext(initialState);
 
-export const GlobalProvider = ({children}) => {
-    
+export const GlobalProvider = ({ children }) => {
+
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
     function deleteTransaction(id) {
@@ -46,7 +46,7 @@ export const GlobalProvider = ({children}) => {
             let budgetTrackerState;
             try {
                 budgetTrackerState = JSON.parse(stringifiedBudgetTrackerState);
-            } catch(e) {
+            } catch (e) {
                 console.log("unable to parse budgetTrackerState from localStorage");
             }
             if (budgetTrackerState?.transactions) {
@@ -57,7 +57,7 @@ export const GlobalProvider = ({children}) => {
     }, []);
 
     return (
-        <GlobalContext.Provider value={{transactions: state.transactions, deleteTransaction, addTransaction}}>
+        <GlobalContext.Provider value={{ transactions: state.transactions, deleteTransaction, addTransaction }}>
             {children}
         </GlobalContext.Provider>
     )
