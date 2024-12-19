@@ -19,11 +19,11 @@ export const IncomeExpense = () => {
     <div className='font-serif flex justify-center'>
       <div className='my-3 p-3 bg-slate-100'>
         <h4 className='text-xl'>Income</h4>
-        <p>{income}</p>
+        <p>${income}</p>
       </div>
       <div className='my-3 p-3 bg-slate-100'>
         <h4 className='text-xl'>Expense</h4>
-        <p>{expense}</p>
+        <p>${expense}</p>
       </div>
     </div>
 
