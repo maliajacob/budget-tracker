@@ -4,12 +4,13 @@ import { Balance } from './components/Balance';
 import { IncomeExpense } from './components/IncomeExpense';
 import { History } from './components/History';
 import { AddTransaction } from './components/AddTransaction';
+import { appWithTranslation } from 'next-i18next';
 
 import { GlobalProvider } from './context/GlobalState';
 
 import './globals.css';
 
-function App() {
+function App({ Component, pageProps }) {
   return (
     <GlobalProvider>
       <Header />
